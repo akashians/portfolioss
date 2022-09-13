@@ -7,7 +7,7 @@ from streamlit_lottie import st_lottie  # pip install streamlit-lottie
 from pathlib import Path
 
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-resume_file = "C:/Users/akash/Documents/akash_portfolio/data/Resume.pdf"
+resume_file = "C:/Users/akash/Documents/trial/akash_portfolio/Resume.pdf"
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Portfolio", page_icon=":blush:", layout="wide")
@@ -34,7 +34,7 @@ lottie_social = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_zw
 lottie_projects = load_lottieurl("https://assets3.lottiefiles.com/packages/lf20_cwA7Cn.json")
 
 
-with open("C:/Users/akash/Documents/akash_portfolio/data/style.css") as f:
+with open("C:/Users/akash/Documents/trial/akash_portfolio/style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
 #####################
@@ -50,7 +50,7 @@ with open(resume_file, "rb") as pdf_file:
 
     
 
-image = Image.open('C:/Users/akash/Documents/akash_portfolio/data/wwe.png')
+image = Image.open('C:/Users/akash/Documents/trial/akash_portfolio/wwe.png')
 st.image(image, width=200,clamp=True)
 st.download_button(
         label=" 📄 Download Resume",
@@ -481,4 +481,4 @@ def local_css(file_name):
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-local_css("C:/Users/akash/Documents/akash_portfolio/data/touch.css")
+local_css("C:/Users/akash/Documents/trial/akash_portfolio/touch.css")
